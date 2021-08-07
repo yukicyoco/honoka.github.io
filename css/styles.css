@@ -1,0 +1,126 @@
+body {
+  background: rgb(250, 199, 205);
+  font-size: 14px;
+  color: rgb(109, 30, 30);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 18px;
+}
+.container {
+  width: 400px;
+  margin: 8px auto; /* センターよせ */
+  background: lemonchiffon;
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+}
+
+#question {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#choices {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+#choices >li {
+  border: 1px solid rgb(189, 188, 188);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#choices > li:hover{
+  background: pink;
+}
+
+#choices > li.correct {
+  background: rgb(219, 168, 253);
+  border-color: rgb(188, 111, 252);
+  color: rgb(59, 4, 70);
+  font-weight: bold;
+}
+
+#choices > li.correct::after {
+  content: '... あってるにゃぁ～😸🎵';
+
+}
+
+
+#choices > li.wrong {
+  background: rgb(219, 253, 168);
+  border-color: rgb(163, 212, 196);
+  color: rgb(4, 70, 48);
+  font-weight: bold;
+}
+
+#choices > li.wrong::after {
+  content: '... ちがうにゃ😹💦';
+}
+
+#btn {
+  background: rgb(240, 132, 222);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 3px 3px 0 rgb(199, 181, 184);
+}
+
+#result > a {
+  background: rgb(248, 62, 217);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 3px 3px 0 rgb(199, 181, 184);
+}
+
+/* #btn:hover {
+  background: rgb(241, 90, 221); */
+
+#btn.disabled {
+  background: rgb(255, 254, 251);
+  box-shadow: 0 3px 3px 0 rgb(180, 164, 166);
+  opacity: 0.7;
+}
+
+#result {
+  position: absolute;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  color: rgb(247, 26, 210);
+  width:  300px;
+  background: rgb(247, 173, 247);
+  padding: 30px;
+  box-shadow: rgb(189, 189, 189);
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+#result.hidden {
+  transform: translateY(-500px);
+}
+
+
+#result > p {
+  font-size: 24px;
+}
+#result > a {
+  display: block;
+  color: rgb(54, 2, 2);
+  text-decoration: none;
+}
