@@ -1,126 +1,68 @@
 body {
-  background: rgb(250, 199, 205);
-  font-size: 14px;
-  color: rgb(109, 30, 30);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgb(22, 126, 196);
+  font-size: 16px;
+  color: rgb(46, 7, 7);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif ;
 }
 
 h1 {
-  text-align: center;
-  font-size: 18px;
-}
-.container {
-  width: 400px;
-  margin: 8px auto; /* センターよせ */
-  background: lemonchiffon;
-  border-radius: 4px;
-  padding: 16px;
-  position: relative;
+color: rgb(241, 212, 79);
+text-align: center;
+font-size: 22px;
 }
 
-#question {
-  margin-bottom: 16px;
-  font-size: 16px;
-  font-weight: bold;
+ main {
+  width: 300px;
+  background: rgb(248, 200, 232);
+  padding: 20px;
+  border: 4px solid hsl(332, 85%, 69%);
+  border-radius: 16px;
+  margin: 16px auto;/* 中央揃え */
+  display: flex;/* 横並べ */
+  justify-content: space-between;/*　それぞれのパネルの間をあける */
+ }
+
+.panel img {
+  width: 90px;
+  height: 110px;
+  margin-bottom: 4px;  /* 下のボタンとスペースあける*/
 }
 
-#choices {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 16px;
-}
 
-#choices >li {
-  border: 1px solid rgb(189, 188, 188);
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
+.stop {
   cursor: pointer;
-}
-
-#choices > li:hover{
-  background: pink;
-}
-
-#choices > li.correct {
-  background: rgb(219, 168, 253);
-  border-color: rgb(188, 111, 252);
-  color: rgb(59, 4, 70);
-  font-weight: bold;
-}
-
-#choices > li.correct::after {
-  content: '... あってるにゃぁ～😸🎵';
-
-}
-
-
-#choices > li.wrong {
-  background: rgb(219, 253, 168);
-  border-color: rgb(163, 212, 196);
-  color: rgb(4, 70, 48);
-  font-weight: bold;
-}
-
-#choices > li.wrong::after {
-  content: '... ちがうにゃ😹💦';
-}
-
-#btn {
-  background: rgb(240, 132, 222);
-  padding: 10px;
-  border-radius: 6px;
+  width: 90px;
+  height: 32px;
+  background: rgb(250, 70, 196);
+  box-shadow: 0 4px 0 rgb(216, 192, 196);
+  border-radius: 30px;
+  line-height: 32px;
   text-align: center;
-  font-weight: bold;
-  box-shadow: 0 3px 3px 0 rgb(199, 181, 184);
+  color: rgb(245, 235, 235);
+  user-select: none;
 }
 
-#result > a {
-  background: rgb(248, 62, 217);
-  padding: 10px;
-  border-radius: 6px;
+#spin {
+  cursor: pointer;
+  width: 280px;
+  height: 36px;
+  background: rgb(11, 22, 184);
+  box-shadow: 0 4px 0 rgb(194, 172, 176);
+  border-radius: 16px;
+  line-height: 36px;
   text-align: center;
-  font-weight: bold;
-  box-shadow: 0 3px 3px 0 rgb(199, 181, 184);
-}
-
-/* #btn:hover {
-  background: rgb(241, 90, 221); */
-
-#btn.disabled {
-  background: rgb(255, 254, 251);
-  box-shadow: 0 3px 3px 0 rgb(180, 164, 166);
-  opacity: 0.7;
-}
-
-#result {
-  position: absolute;
-  font-weight: bold;
-  font-size: large;
-  text-align: center;
-  color: rgb(247, 26, 210);
-  width:  300px;
-  background: rgb(247, 173, 247);
-  padding: 30px;
-  box-shadow: rgb(189, 189, 189);
-  top: 80px;
-  left: 0;
-  right: 0;
+  color: rgb(245, 235, 235);
+  user-select: none;
+  /* ボタンを中央に */
   margin: 0 auto;
-  border-radius: 25px;
-  transition: 0.4s;
 }
 
-#result.hidden {
-  transform: translateY(-500px);
+.unmatched {
+  opacity: 0.5;
 }
 
-
-#result > p {
-  font-size: 24px;
-}
-#result > a {
-  display: block;
-  color: rgb(54, 2, 2);
-  text-decoration: none;
+/* スピンボタン押したらもう押せないように */
+.inactive {
+  opacity: 0.5;
 }
