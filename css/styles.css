@@ -7,20 +7,20 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 .container {
-  width: 400px;
+  width: 330px;
   margin: 8px auto; /* センターよせ */
   background: lemonchiffon;
   border-radius: 4px;
-  padding: 16px;
+  padding: 8px;
   position: relative;
 }
 
 #question {
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -30,7 +30,7 @@ h1 {
   margin-bottom: 16px;
 }
 
-#choices >li {
+#choices > li {
   border: 1px solid rgb(189, 188, 188);
   border-radius: 4px;
   padding: 10px;
@@ -38,7 +38,7 @@ h1 {
   cursor: pointer;
 }
 
-#choices > li:hover{
+#choices > li:hover {
   background: pink;
 }
 
@@ -50,10 +50,8 @@ h1 {
 }
 
 #choices > li.correct::after {
-  content: '... あってるにゃぁ～😸🎵';
-
+  content: "... あってるにゃぁ～😸🎵";
 }
-
 
 #choices > li.wrong {
   background: rgb(219, 253, 168);
@@ -63,7 +61,7 @@ h1 {
 }
 
 #choices > li.wrong::after {
-  content: '... ちがうにゃ😹💦';
+  content: "... ちがうにゃ😹💦";
 }
 
 #btn {
@@ -99,7 +97,7 @@ h1 {
   font-size: large;
   text-align: center;
   color: rgb(247, 26, 210);
-  width:  300px;
+  width: 300px;
   background: rgb(247, 173, 247);
   padding: 30px;
   box-shadow: rgb(189, 189, 189);
@@ -114,7 +112,6 @@ h1 {
 #result.hidden {
   transform: translateY(-500px);
 }
-
 
 #result > p {
   font-size: 24px;
